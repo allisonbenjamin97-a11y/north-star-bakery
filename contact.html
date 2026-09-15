@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>North Star Bakery | Contact and Preorders</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body data-page="contact">
+  <header>
+    <h1>Contact and Preorders</h1>
+    <nav aria-label="Primary navigation"><ul>
+      <li><a href="index.html">Home</a></li><li><a href="products.html">Products</a></li>
+      <li><a href="about.html">About</a></li><li><a href="contact.html" aria-current="page">Contact and Preorders</a></li>
+    </ul></nav>
+  </header>
+  <main>
+    <h2>Send a Bakery Request</h2>
+    <p>Your name is remembered on this device to make a future request faster.</p>
+    <p id="remembered-name" class="saved-panel" aria-live="polite" hidden></p>
+    <form id="preorder-form" novalidate>
+      <fieldset>
+        <legend>Your Contact Information</legend>
+        <label for="full-name">Full name</label>
+              <p id="name-help">Enter at least two characters.</p>
+        <input type="text" id="full-name" name="full-name" aria-describedby="name-help name-error">
+        <p id="name-error" class="error"></p>
+        <label for="email">Email address</label>
+        <input type="email" id="email" name="email" aria-describedby="email-error">
+        <p id="email-error" class="error"></p>
+      </fieldset>
+      <fieldset>
+        <legend>Request Details</legend>
+        <label for="request-type">Request type</label>
+        <select id="request-type" name="request-type"><option value="">Choose one</option><option>Preorder</option><option>Celebration cake</option><option>General question</option></select>
+        <p id="request-error" class="error"></p>
+        <label for="item-details">Items, quantities, or question</label>
+        <textarea id="item-details" name="item-details" rows="5" aria-describedby="details-error"></textarea>
+        <p id="details-error" class="error"></p>
+      </fieldset>
+      <button type="submit">Send Request</button>
+      <p id="form-status" class="success" hidden></p>
+    </form>
+  </main>
+  <footer><p>&copy; 2026 North Star Bakery</p></footer>
+</body>
+</html>
